@@ -1,7 +1,7 @@
 import sys
 import re
 
-string = input("Введите строку: ").strip()
+string = input("Введите строку: ")
 
 def isValidNumber(string):
     return string.isdigit() and len(string) in [13, 15, 16]
@@ -32,4 +32,5 @@ if getCheckSum(string) % 10 != 0:
     print("Неверная контрольная сумма")
     sys.exit()
 
-print(f"Тип карты: {getCardType(string)}")
+print("Тип карты: ",getCardType(string))
+
